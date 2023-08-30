@@ -25,7 +25,8 @@ You can see a live demo of the app (https://youtu.be/zJRZliaZRIo).
 To run the frontend of the app locally, follow these steps:
 
 1. Clone this repository:
+```
+git clone: https://github.com/Sabakhupenia/TODO-App-Front-End
+```
 
-git clone https://github.com/your-username/todo-frontend.git
-
-2. Navigate To index.html 
+2. Navigate To ``` index.html ```
