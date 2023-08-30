@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background:white;
+    display: flex;
+    justify-content: center;
+}
+.background{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("./images/bg-desktop-light.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+.todo-container{
+    width: 540px;
+    padding-top: 70px;
+}
+.todo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h2{
+color: white;
+font-size: 40px;
+font-weight: 700;
+letter-spacing: 15px;
+word-wrap: break-word
+}
+.moon{
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.create-todo{
+    width: 100%;
+    height: 64px;
+    border-radius: 15px;
+    border-color:blue;
+    background: color-mix(in srgb, #ab69ef 70%, white 30%);
+    margin-top: 48px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 0 20px;
+}
+.checkbox-item{
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid #E3E4F1;
+    position: relative;
+}
+
+.checkbox-1{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.input-div{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url("./images/icon-check.svg"),linear-gradient(rgba(85, 221, 255, 1), rgba(192, 88, 243, 1));
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.checkbox-1:checked + .input-div{
+    opacity: 1;
+}
+.input-text{
+color: black;
+background:color-mix(in srgb, #ab69ef 70%, white 30%);
+caret-color:  #3A7CFD;
+font-size: 18px;
+outline: none;
+border: none;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.25px;
+width: 200px;
+}
+ul{
+    border-radius: 5px ;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    height: 64px;
+    justify-content: space-between;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border-bottom: 1px solid#E3E4F1;
+    
+}
+li img{
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+}
+li:hover img{
+    opacity: 1;
+}
+h3{
+color: #494C6B;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.25px;
+}
+.todo-list{
+    margin-top: 24px;
+    border-radius: 5px;
+    background:color-mix(in srgb, #597ae4 70%, white 30%);
+}
+
+.ul-footer{
+    width: 100%;
+    height: 64px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.clearbutton:hover {
+    color: #3A7CFD;
+}
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+.pagination-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    border-radius: 4px;
+    margin: 0 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+.pagination-button:hover {
+    background-color: #ddd;
+  }
+  
+  .page-numbers {
+    display: flex;
+    align-items: center;
+    margin: 0 16px;
+  }
+  
+.page-number {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    border-radius: 50%;
+    margin: 0 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+.page-number:hover {
+    background-color: #ddd;
+  }
+  
+  
+.page-number.active {
+    background-color: color-mix(in srgb, #597ae4 70%, white 30%);
+    color: white;
+  }
+  
+
+.left{
+color: rgb(130, 3, 83);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.194px;
+margin-top: 30px;
+cursor: pointer;
+}
+h4{
+color: black;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.194px;
+margin-top: 30px;
+cursor: pointer;
+}
+.active-text{
+    display: flex;
+    gap: 19px;
+}
+
+.completedtxt:hover {
+    color: #3A7CFD;
+}
+
+.active:hover {
+    color: #3A7CFD;
+}
+
+.all:hover{
+    color: #3A7CFD;
+}
+
+.active {
+    color: rgb(130, 3, 83)
+}
+.all{
+    color: rgb(130, 3, 83)
+
+}
+
+.completedtxt {
+    color: rgb(130, 3, 83)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.drag{
+    text-align: center;
+    margin-top: 48px;
+}
+
+.mobile-footer{
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    margin-top: 16px;
+    display: none;
+}
+
+.flex-cross{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.mobile-flex{
+    display: flex;
+    gap: 10px;
+}
+
+.darkElement{
+    background: #25273D;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.update-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+
+.input {
+    margin-bottom: 20px;
+}
+
+.completed {
+    background-color: color-mix(in srgb, #ab69ef 70%, white 30%);
+}    
+
+
+#add-task {
+    display: inline;
+    opacity: 0;
+}
+#update-task {
+    display: none;
+    opacity: 0;
+}
+
+
+.editing-task #add-task {
+    display: none;
+}
+
+.editing-task #update-task {
+    display: inline;
+}
+
+
+
+.checkbox-label {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+  
+
+  
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border: 2px solid #E3E4F1;
+    border-radius: 50%;
+  }
+  
+.checkbox-1:checked ~ .checkmark {
+    background: linear-gradient(rgba(85, 221, 255, 1), rgba(192, 88, 243, 1));
+
+  }
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+.checkbox-1:checked ~ .checkmark:after {
+    display: block;
+    background-image: url('./images/icon-check.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .todo-container{
+        width: 327px;
+}
+    .mobile-footer{
+        display: flex;
+    }
+.active-text{
+    display: none;
+}
+}
+
+.checkbox-item:hover {
+    background-image: url(./images/Group4.svg); /* Set the gradient image as the border on hover */
+    background-size: cover; /* Adjust the background-size if needed */
+  }
+
+
+
+
+
+/* Add this CSS to set pointer cursor for specific elements */
+.img,  .create-todo.dark, .input-div.dark, .active-text,  h4 , li img {
+    cursor: pointer;
+}
+
+
+
+

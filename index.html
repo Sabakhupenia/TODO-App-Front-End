@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+<link rel="stylesheet" href="./styles.css">
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+
+
+
+
+<form action="" method="post" id="add-task-form">
+   
+<div class="background">
+    
+
+    </div>
+    <div class="todo-container">
+      <div class="todo">
+        <h2>TODO</h2>
+        <img class="img" src="./images/icon-moon.svg">
+      
+      </div>
+      <div class="create-todo dark">
+
+          
+          <input id="task-id" type="hidden" name="task-id" value=""> 
+        
+    
+        <input  name="title" id="task-title" class="input-text dark input" type="text" placeholder="Create a new todo...">
+      </div>
+
+
+     <div class="pagination">
+      <button id="prev-page" class="pagination-button">Previous</button>
+      <div id="page-numbers" class="page-numbers"></div>
+      <button id="next-page" class="pagination-button">Next</button>
+    </div>
+    
+
+
+
+    <div>
+      <button type="submit" id="add-task" data-action="add">Add Task</button>
+      <button type="submit" id="update-task" data-action="update">Update</button>
+  </div>
+
+
+      <div class="todo-list dark">
+        <ul  id="taskslist" class="ul-tag">
+
+          </ul>
+          <div class="ul-footer"> 
+            <p class="left" id="items-left"> items left</p>
+            <div class="active-text">
+              <h4 class="all" >All</h4>
+              <h4 class="active">Active</h4>
+              <h4 class="completedtxt">Completed</h4>
+            </div>
+            <p class="clearbutton left">Clear Completed</p>
+          </div>
+          <div class="mobile-footer dark">
+            <div class="mobile-flex">
+            <h4 class="all" >All</h4>
+            <h4 class="active">Active</h4>
+            <h4 class="completed">Completed</h4>
+            </div>
+
+          </div>
+          
+
+
+  <script >
+
+let image=document.querySelector(".img");
+let background=document.querySelector(".background");
+let darkElement=document.querySelectorAll(".dark");
+let mainText=document.querySelectorAll(".main-text")
+let num=0;
+let ulTag=document.querySelector(".ul-tag")
+let input=document.querySelector(".input-text")
+image.addEventListener("click" ,()=>{
+    if(num===0){
+        document.body.style.backgroundColor="#171823";
+        background.style.backgroundImage="url('./images/bg-desktop-dark.jpg')"
+        image.src="./images/icon-sun.svg";
+
+        for(let i=0;i<darkElement.length; i++){
+            darkElement[i].classList.add("darkElement");
+        }
+        for(let z=0;z<mainText.length;z++){
+            mainText[z].style.color="#C8CBE7"
+        }
+        num=1
+    }else{ 
+        document.body.style.backgroundColor="#FAFAFA";
+        background.style.backgroundImage="url('./images/bg-desktop-light.jpg')"
+        image.src="./images/icon-moon.svg";
+
+        for(let i=0;i<darkElement.length; i++){
+            darkElement[i].classList.remove("darkElement");
+        }
+        for(let z=0;z<mainText.length;z++){
+            mainText[z].style.color="#494C6B"
+        }
+        num=0
+    }
+})
+
+  </script>
+  <script src="app.js"></script>
+  <script src="crud.js"></script>
+  <script src="utils.js"></script>
+
+
+
+
+
+  </body>
+
+</html>
